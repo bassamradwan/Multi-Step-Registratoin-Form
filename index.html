@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Select Account Type -->
+        <div class="form-step form-step-active" id="accountTypeStep">
+            <h2>Register</h2>
+            <label><input type="radio" name="accountType" value="personal" checked> Personal</label>
+            <label><input type="radio" name="accountType" value="company"> Company</label>
+            <button id="btn-accountType">Next</button>
+        </div>
+        
+        <!-- User Registration -->
+        <div class="form-step" id="userRegistrationStep">
+            <h2>Register User</h2>
+            <form id="userForm">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <label><input type="checkbox" required> Accept Terms</label>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <!-- Company Registration Steps -->
+        <div class="form-step" id="companyStep1">
+            <h2>Register Company</h2>
+            <form id="companyForm1">
+                <input type="text" placeholder="Company Name" required>
+                <input type="text" placeholder="Address" required>
+                <input type="text" placeholder="Phone Number" required>
+                <input type="number" placeholder="Total Number of Staff" required>
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step" id="companyStep2">
+            <h2>Select Plan</h2>
+            <form id="companyForm2">
+                <label><input type="radio" name="plan" value="plan1"> Plan 1</label>
+                <label><input type="radio" name="plan" value="plan2"> Plan 2</label>
+                <label><input type="radio" name="plan" value="plan3"> Plan 3</label>
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+            </form>
+        </div>
+
+        <div class="form-step" id="companyStep3">
+            <h2>Payment Information</h2>
+            <form id="companyForm3">
+                <div>
+                    <h3>Plan Overview</h3>
+                    <p>Selected Plan Details...</p>
+                </div>
+                <input type="text" placeholder="Credit Card Information" required>
+                <input type="text" placeholder="Billing Address" required>
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="submit">Pay</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
